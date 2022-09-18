@@ -1,0 +1,13 @@
+<li>
+  <div [ngClass]="{'doneItem' : done}" class="todo">
+    <button class="btn done" (click)="done = !done">Сделано</button>
+
+    <div>
+      <div *ngIf="edit == false" [ngClass]="{active: done}">{{toDo.name}}</div>
+      <input *ngIf="edit == true" type="text" [(ngModel)]="toDo.name" #toDoItem>
+    </div>
+
+    <button class="btn edit" (click)="setEdit(toDo)">{{edit ? "Сохранить": "Изменить"}}</button>
+    <button class="btn delete" (click)="delete(toDo)">Удалить</button>
+  </div>
+</li>

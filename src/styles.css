@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'lobster';
+  src: url('./assets/fonts/lobster.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  src: url('./assets/fonts/Caveat.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Caveat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2d2d2d;
+  text-align: center;
+}
+

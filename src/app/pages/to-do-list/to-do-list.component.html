@@ -1,0 +1,15 @@
+<main class="main">
+
+  <app-create-to-do></app-create-to-do>
+
+  <h2 *ngIf="loading">Loading...</h2>
+
+  <h2 *ngIf="errorMessage">{{errorMessage}}</h2>
+
+  <ul>
+    <app-to-do *ngFor="let toDo of toDoService.toDoList | search : toDoService.searchItem"
+               [toDoItem]="toDo"
+    ></app-to-do>
+  </ul>
+
+</main>

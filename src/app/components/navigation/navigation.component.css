@@ -1,0 +1,21 @@
+.nav {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+ li {
+  list-style-type: none;
+}
+ a {
+  font-size: 30px;
+  color: darkgrey;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+.active {
+  color: white;
+}
+
+

@@ -1,0 +1,46 @@
+
+li {
+  list-style-type: none;
+}
+
+.todo {
+  width: 600px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #444444;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.todo div {
+  width: 270px;
+  padding-right: 10px;
+  margin: 0px 10px 0px;
+  font-size: 25px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.active {
+  text-decoration: line-through;
+}
+.doneItem {
+  background-color: dimgray;
+}
+
+.btn {
+  background-color: #3434e1;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px;
+  color: white;
+  font-family: lobster;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #3434e1;
+}
