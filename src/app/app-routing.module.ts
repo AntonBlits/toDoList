@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {ToDoListComponent} from "./pages/to-do-list/to-do-list.component";
 import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.component";
@@ -16,4 +16,5 @@ const routes: Routes = [
   })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

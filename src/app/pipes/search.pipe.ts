@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 import {IToDo} from "../models/IToDo";
 
 @Pipe({
@@ -6,7 +6,7 @@ import {IToDo} from "../models/IToDo";
 })
 export class SearchPipe implements PipeTransform {
   transform(toDoList: IToDo[], search: string): IToDo[] {
-    if(search) {
+    if (search) {
       return toDoList.filter(td => td.name.toLowerCase().includes(search.toLowerCase()));
     }
     return toDoList;

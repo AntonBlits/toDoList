@@ -1,6 +1,7 @@
 .form {
   margin-bottom: 10px;
 }
+
 .warning {
   font-size: 30px;
   color: red;
@@ -20,6 +21,7 @@
   font-family: lobster;
   font-size: 16px;
 }
+
 .btn:hover {
   background-color: white;
   color: #3434e1;

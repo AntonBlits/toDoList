@@ -11,6 +11,7 @@ import {CreateToDoComponent} from './components/create-to-do/create-to-do.compon
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {SearchPipe} from './pipes/search.pipe';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
+import {ArchiveModule} from "./pages/archive/archive.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.compo
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    ArchiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

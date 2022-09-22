@@ -25,6 +25,7 @@ li {
 .active {
   text-decoration: line-through;
 }
+
 .doneItem {
   background-color: dimgray;
 }

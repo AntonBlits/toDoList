@@ -7,12 +7,13 @@ import {ArchiveRoutingModule} from "./archive-routing.module";
 @NgModule({
   declarations: [
     ArchiveComponent,
-    ToDoArchiveComponent,
+    ToDoArchiveComponent
   ],
   imports: [
     CommonModule,
     ArchiveRoutingModule
   ],
+  providers: []
 })
 export class ArchiveModule {
 }

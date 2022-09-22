@@ -12,9 +12,9 @@ export class ToDoListComponent implements OnInit {
   constructor(public toDoService: ToDoListService) {
   }
 
-  loading = false;
+  public loading = false;
 
-  errorMessage: string;
+  public errorMessage: string;
 
   ngOnInit() {
     this.loading = true;

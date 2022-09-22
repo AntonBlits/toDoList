@@ -4,8 +4,8 @@
   <h2 *ngIf="errorMessage">{{errorMessage}}</h2>
 
   <ul>
-    <app-to-do-archive *ngFor = "let toDo of archiveService.archive "
-               [toDoItem] = "toDo"
+    <app-to-do-archive *ngFor="let toDo of archiveService.archive "
+                       [toDoItem]="toDo"
     ></app-to-do-archive>
   </ul>
 

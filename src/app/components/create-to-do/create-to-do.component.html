@@ -1,5 +1,5 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <input class="addTodo" formControlName="todo" >
+  <input class="addTodo" formControlName="todo">
   <button class="btn" type="submit" [disabled]="form.invalid">Добавить</button>
 
   <p class="warning" *ngIf="form.controls['todo'].invalid && form.controls['todo'].touched">Введите текст!</p>

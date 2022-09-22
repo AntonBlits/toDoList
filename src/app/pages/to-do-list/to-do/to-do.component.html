@@ -7,7 +7,7 @@
       <input *ngIf="edit == true" type="text" [(ngModel)]="toDo.name" #toDoItem>
     </div>
 
-    <button class="btn edit" (click)="setEdit(toDo)">{{edit ? "Сохранить": "Изменить"}}</button>
+    <button class="btn edit" (click)="setEdit(toDo)">{{edit ? "Сохранить" : "Изменить"}}</button>
     <button class="btn delete" (click)="delete(toDo)">Удалить</button>
   </div>
 </li>

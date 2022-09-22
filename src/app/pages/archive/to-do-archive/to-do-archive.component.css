@@ -1,6 +1,7 @@
 li {
   list-style-type: none;
 }
+
 .todo {
   width: 500px;
   padding: 20px;
@@ -10,13 +11,15 @@ li {
   justify-content: space-around;
   align-items: center;
 }
+
 .todo div {
-  width:270px;
+  width: 270px;
   margin: 0px 10px 0px;
   font-size: 25px;
   word-wrap: break-word;
   word-break: break-all;
 }
+
 .btn {
   background-color: #3434e1;
   border: 0;

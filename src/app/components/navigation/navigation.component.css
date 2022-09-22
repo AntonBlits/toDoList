@@ -3,17 +3,21 @@
   display: flex;
   justify-content: space-between;
 }
- li {
+
+li {
   list-style-type: none;
 }
- a {
+
+a {
   font-size: 30px;
   color: darkgrey;
   text-decoration: none;
 }
+
 a:hover {
   color: white;
 }
+
 .active {
   color: white;
 }

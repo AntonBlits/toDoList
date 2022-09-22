@@ -2,23 +2,26 @@
   background-color: #444444;
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   font-family: 'lobster', sans-serif;
 }
-.header h1{
+
+.header h1 {
   color: white;
   font-size: 40px;
   margin-left: 20px;
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-right: 30px;
 }
+
 .search-input {
   height: 30px;
   font-family: 'lobster', sans-serif;

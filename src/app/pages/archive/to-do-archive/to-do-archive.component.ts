@@ -13,14 +13,14 @@ export class ToDoArchiveComponent {
   constructor(private archiveService: ArchiveService, private toDoService: ToDoListService) {
   }
 
-  @Input("toDoItem") toDo: IToDo;
+  @Input("toDoItem") public toDo: IToDo;
 
 
-  delete(toDo: IToDo) {
+  public delete(toDo: IToDo) {
     this.archiveService.deleteToDo(toDo);
   }
 
-  recover(toDo:IToDo){
+  public recover(toDo: IToDo) {
     this.toDoService.recoverToDo(toDo).subscribe();
     this.archiveService.deleteToDo(toDo);
   }

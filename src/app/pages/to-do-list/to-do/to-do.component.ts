@@ -11,24 +11,25 @@ import {ArchiveService} from "../../../data/archive.service";
 export class ToDoComponent {
 
   constructor(private toDoService: ToDoListService,
-              private archiveService: ArchiveService) {}
+              private archiveService: ArchiveService) {
+  }
 
-  @Input("toDoItem") toDo: IToDo;
+  @Input("toDoItem") public toDo: IToDo;
 
-  @ViewChild('toDoItem') toDoName: ElementRef;
+  @ViewChild('toDoItem') public toDoName: ElementRef;
 
-  done: boolean = false;
+  public done: boolean = false;
 
-  edit: boolean = false;
+  public edit: boolean = false;
 
-  delete(toDo: IToDo) {
+  public delete(toDo: IToDo) {
     this.archiveService.addToDoInArchive(toDo).subscribe();
     this.toDoService.deleteToDo(toDo);
   }
 
-  setEdit(toDo: IToDo) {
+  public setEdit(toDo: IToDo) {
     if (this.edit) {
-      this.toDoService.editToDo(toDo, this.toDoName.nativeElement.value ).subscribe();
+      this.toDoService.editToDo(toDo, this.toDoName.nativeElement.value).subscribe();
       this.edit = false;
     } else {
       this.edit = true;
