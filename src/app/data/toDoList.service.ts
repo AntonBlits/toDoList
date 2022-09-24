@@ -1,13 +1,13 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+
 import {catchError, Observable, tap, throwError} from "rxjs";
+
 import {IToDo} from "../models/IToDo";
 
 @Injectable({
-    providedIn: 'root'
-  }
-)
-
+  providedIn: 'root'
+})
 export class ToDoListService {
 
   constructor(private http: HttpClient) {
@@ -38,10 +38,7 @@ export class ToDoListService {
   }
 
   public deleteToDo(toDo: IToDo) {
-    this.http.delete<IToDo>(`${this.url}/${toDo.id}`)
-      .subscribe(() => {
-        this.toDoList = this.toDoList.filter(t => t.id !== toDo.id);
-      })
+    return this.http.delete<IToDo>(`${this.url}/${toDo.id}`)
   }
 
   public editToDo(toDo: IToDo, toDoName: string): Observable<IToDo> {

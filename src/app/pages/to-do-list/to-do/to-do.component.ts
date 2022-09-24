@@ -1,4 +1,5 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
+
 import {IToDo} from "../../../models/IToDo";
 import {ToDoListService} from "../../../data/toDoList.service";
 import {ArchiveService} from "../../../data/archive.service";
@@ -24,7 +25,9 @@ export class ToDoComponent {
 
   public delete(toDo: IToDo) {
     this.archiveService.addToDoInArchive(toDo).subscribe();
-    this.toDoService.deleteToDo(toDo);
+    this.toDoService.deleteToDo(toDo).subscribe(() => {
+      this.toDoService.toDoList = this.toDoService.toDoList.filter(t => t.id !== toDo.id);
+    });
   }
 
   public setEdit(toDo: IToDo) {

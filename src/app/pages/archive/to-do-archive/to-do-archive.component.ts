@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+
 import {IToDo} from "../../../models/IToDo";
 import {ArchiveService} from "../../../data/archive.service";
 import {ToDoListService} from "../../../data/toDoList.service";
@@ -15,14 +16,14 @@ export class ToDoArchiveComponent {
 
   @Input("toDoItem") public toDo: IToDo;
 
-
   public delete(toDo: IToDo) {
-    this.archiveService.deleteToDo(toDo);
+    this.archiveService.deleteToDo(toDo).subscribe(() => {
+      this.archiveService.archive = this.archiveService.archive.filter(td => td.id !== toDo.id)
+    });
   }
 
   public recover(toDo: IToDo) {
     this.toDoService.recoverToDo(toDo).subscribe();
     this.archiveService.deleteToDo(toDo);
   }
-
 }
